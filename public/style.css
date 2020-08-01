@@ -52,7 +52,7 @@ a {
 }
 
 .bg-color .bg-image h2 {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 3px;
   color: var(--white);
 }
@@ -83,7 +83,7 @@ a {
 .bg-color .form-sign-in h2 {
   margin: 16px auto 24px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--font-bold);
 }
 
@@ -92,13 +92,59 @@ a {
   flex-direction: column;
   margin: 0 auto;
 }
+.bg-color .form-sign-in form div {
+  display: flex;
+  flex-direction: column;
+}
 
-.bg-color .form-sign-in form input {
+/* Estilização da mensagem de erro que informa como a senha e o email devem ser enviados */
+.bg-color .form-sign-in form div .requirements {
+  overflow: hidden;
+  margin: 0 0 16px 36px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: #e21b1b;
+  max-height: 0;
+  transition: all ease-in 0.3s;
+}
+
+/* Estilização do input de email e senha, qundo não estão em foco (aparência padrão) */
+.bg-color .form-sign-in form input,
+.bg-color .form-sign-in form input:invalid:not(:focus) {
   width: 290px;
-  margin: 0 auto 44px;
+  margin: 0 auto 20px;
   padding: 11px;
   border: 1px solid var(--border);
   border-radius: 5px;
+}
+
+/* Estilização de como o input deve se comportar qunado estiver tudo correto, 
+gernado um respaldo visual, qunado o que sendo digitado está certo */
+.bg-color .form-sign-in form input:valid {
+  background: url(/assets/ckeck.svg);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 265px 10px;
+  border: 1px solid #3bb54a;
+}
+/* Estilização de como o input deve se comportar qunado estiver tudo errado  */
+.bg-color .form-sign-in form input:invalid:focus:not(:placeholder-shown) {
+  background: url(/assets/error.svg);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 265px 10px;
+  border: 1px solid #e21b1b;
+}
+
+/* Aqui, a propriedade max-height é definida com um valor diferente do inicial, 
+para que quando tenha algum erro no texto digitado no input, a menságem seja exibida */
+.bg-color
+  .form-sign-in
+  form
+  input:invalid:focus:not(:placeholder-shown)
+  ~ .requirements {
+  max-height: 200px;
 }
 
 /* estilizando o input ocm atributo type="checkbox", por isso a notação de colchetes no seletor
@@ -114,9 +160,10 @@ para que seja selecionado baseado em algum atributo específico
   color: var(--bg-image);
 }
 
+/* Estilizando o label  */
 .bg-color .form-sign-in form label {
-  margin: 0 0 8px 24px;
-  font-family: sans-serif;
+  margin: 0 0 8px 36px;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: var(--font-normal);
 }
@@ -146,7 +193,7 @@ para que seja selecionado baseado em algum atributo específico
 
 .bg-color .form-sign-in p {
   margin: 16px 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-align: center;

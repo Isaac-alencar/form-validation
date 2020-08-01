@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation | Catch Errors and disply them</title>
     <link rel="stylesheet" href="/public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -22,18 +26,38 @@
         <div class="form-sign-in">
           <h2>Support the Equal Justice</h2>
           <form action="#" method="POST">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              required
-              name=""
-              id="email"
-              spellcheck="false"
-              placeholder=" "
-            />
-            <!--spellcheck, atributto utilizado para desativar a verificação de ortografia -->
-            <label for="password">Password</label>
-            <input type="password" required id="password" placeholder=" " />
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                required
+                name=""
+                id="email"
+                spellcheck="false"
+                placeholder=" "
+              />
+              <!--spellcheck, atributto utilizado para desativar a verificação de ortografia -->
+              <div class="requirements">
+                Digite um email válido.
+              </div>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                required
+                id="password"
+                placeholder=" "
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+              />
+              <!-- 
+                pattern, atributo usado para definir uma nova expressão regular 
+                para validar a senha com especificações como tamanho, e caracteres obrigatórios  -->
+              <div class="requirements">
+                Sua senha deve ter no mínimo 6 caractéres, sendo ao menos uma
+                letra maiúscula, uma minúscula e um número.
+              </div>
+            </div>
 
             <label for="terms">
               <input type="checkbox" name="" id="terms" />

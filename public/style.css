@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  box-sizing: border-box;
+}
+
+/* Definindo a paleta de cores utilizada no projeto */
+html,
+body {
+  height: 100%;
+
+  /* Colors Schema */
+  --background-container: #000;
+  --blue-shadow: #8a9fd4;
+  --bg-image: #6b29f8;
+  --purple-shadow: #5420c3;
+  --white: #f4f4f4;
+  --gray: #5e6472;
+  --font-bold: #404040;
+  --font-normal: #898989;
+  --border: #e2e2e2;
+}
+
+body {
+  background-color: var(--background-container);
+}
+a {
+  text-decoration: none;
+}
+/* div que central que contém todos os elementos */
+.container {
+  margin: 70px auto;
+  width: max(500px, 80%);
+  height: 500px;
+  border-radius: 28px;
+  background-color: var(--background-container);
+}
+
+/* div que contém o formuário e a imgem lateral com as frases */
+.bg-color {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.bg-color .bg-image {
+  display: flex;
+  align-items: center;
+}
+
+.bg-color .bg-image h2 {
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+
+.bg-color .bg-image span {
+  margin-left: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.bg-color .bg-image img {
+  margin: 36px 0 0 16px;
+  width: 250px;
+}
+
+/* formulário */
+.bg-color .form-sign-in {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: 500px;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.bg-color .form-sign-in h2 {
+  margin: 16px auto 24px;
+  text-align: center;
+  font-family: sans-serif;
+  color: var(--font-bold);
+}
+
+.bg-color .form-sign-in form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.bg-color .form-sign-in form input {
+  width: 290px;
+  margin: 0 auto 44px;
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+/* estilizando o input ocm atributo type="checkbox", por isso a notação de colchetes no seletor
+para que seja selecionado baseado em algum atributo específico
+ */
+.bg-color .form-sign-in form input[type="checkbox"] {
+  width: 10px;
+  margin-bottom: 21px;
+}
+
+.bg-color .form-sign-in form span {
+  font-weight: bold;
+  color: var(--bg-image);
+}
+
+.bg-color .form-sign-in form label {
+  margin: 0 0 8px 24px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: var(--font-normal);
+}
+
+/* Editando o label com o for que aponta para o check-box */
+.bg-color .form-sign-in form label[for="terms"] {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.bg-color .form-sign-in button {
+  width: 250px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: var(--purple-shadow);
+  color: var(--white);
+  transition: all ease-in 0.3s;
+}
+.bg-color .form-sign-in button:hover {
+  opacity: 0.8;
+}
+
+.bg-color .form-sign-in p {
+  margin: 16px 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--font-bold);
+}
+
+.bg-color .form-sign-in a {
+  color: var(--bg-image);
+}

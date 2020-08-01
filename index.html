@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation | Catch Errors and disply them</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-color">
+        <div class="bg-image">
+          <img
+            src="./assets/geometric-bg.png"
+            alt="geometric hand collorfull"
+          />
+          <h2>
+            #Black Lives Matter <br />
+            <span>Justice for black lives </span>
+          </h2>
+        </div>
+        <div class="form-sign-in">
+          <h2>Support the Equal Justice</h2>
+          <form action="#" method="POST">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              required
+              name=""
+              id="email"
+              spellcheck="false"
+              placeholder=" "
+            />
+            <!--spellcheck, atributto utilizado para desativar a verificação de ortografia -->
+            <label for="password">Password</label>
+            <input type="password" required id="password" placeholder=" " />
+
+            <label for="terms">
+              <input type="checkbox" name="" id="terms" />
+              I accept the <span>Terms of service</span> and privacy policy.
+            </label>
+
+            <button type="submit">Sign Up</button>
+            <p>Already register ? <a href="#">Sign-in</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

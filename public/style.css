@@ -119,8 +119,8 @@ a {
   border-radius: 5px;
 }
 
-/* Estilização de como o input deve se comportar qunado estiver tudo correto, 
-gernado um respaldo visual, qunado o que sendo digitado está certo */
+/* Estilização de como o input deve se comportar quando estiver tudo correto, 
+gerando um respaldo visual, quando o que sendo digitado está certo */
 .bg-color .form-sign-in form input:valid {
   background: url(/assets/ckeck.svg);
   background-size: 18px;
@@ -128,7 +128,7 @@ gernado um respaldo visual, qunado o que sendo digitado está certo */
   background-position: 265px 10px;
   border: 1px solid #3bb54a;
 }
-/* Estilização de como o input deve se comportar qunado estiver tudo errado  */
+/* Estilização de como o input deve se comportar quando estiver tudo errado  */
 .bg-color .form-sign-in form input:invalid:focus:not(:placeholder-shown) {
   background: url(/assets/error.svg);
   background-size: 18px;

@@ -2,6 +2,10 @@
 
 Pequeno formulário para demonstrar recursos de HTML e CSS para lidar com a validação de formulários diretamente no Front-End. É muito importante que o Front-end seja responsável por filtrar a maioria das informações erradas em inputs de senhas e emails(por exemplo), pois, desta forma, o Back-end se beneficia por não precisar de muito tempo para processar os dados recebidos.
 
+# Previw do Visual
+
+![alt](https://pwa-commerce-uploads-image.s3.us-east-2.amazonaws.com/Captura+de+tela+de+2020-08-01+19-20-38.png)
+
 ## Vantagens de usar esses recursos
 
 - Filtro das informações que serão recebidas no Back-end;
@@ -152,3 +156,7 @@ para que quando tenha algum erro no texto digitado no input, a mensagem seja exi
   O ~ só selecionará o primeiro elemento, imediatamente, após o elemento inicial, esse é mais generalista. Ele selecionará, usando o nosso exemplo acima, qualquer elemento .requirements, desde que ele venha depois de um elemento .bg-color .form-sign-in form input:invalid:focus:(:placeholder-shown).
 */
 ```
+
+# Fim do Projeto - Demonstração
+
+![](https://pwa-commerce-uploads-image.s3.us-east-2.amazonaws.com/form_validator.gif)
